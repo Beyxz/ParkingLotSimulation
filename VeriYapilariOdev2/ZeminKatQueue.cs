@@ -52,14 +52,14 @@ namespace VeriYapilariOdev2
             }
             //object temp = "";
             //temp = Peek();
-            //string temp = (string)Peek();
             object temp = Queue[front];
             front++;
             if (front == size) front = 0;
             Arabalar.RemoveAt(Arabalar.Count-count);
             count--;
-            //size--;
-            //string x = temp.ToString();
+            size--;
+            /*sanırım size-- yaptığımız için Queue'den eleman silip Queue'ya
+            bodrumkattan araba eklemeye çalıştığımızda overflow hatası veriyor*/
             return temp;
         }
 
